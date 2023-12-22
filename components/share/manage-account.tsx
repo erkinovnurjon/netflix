@@ -5,8 +5,8 @@ import {useState} from "react";
 import {LockKeyhole, Trash2} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
-import LoginAccountForm from "@/components/ui/form/login-account-form";
-import CreateAccountForm from "@/components/ui/form/create-account-form";
+import LoginAccountForm from "@/components/form/login-account-form";
+import CreateAccountForm from "@/components/form/create-account-form";
 
 
 const ManageAccount = () => {

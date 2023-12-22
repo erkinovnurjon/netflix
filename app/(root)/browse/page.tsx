@@ -1,9 +1,9 @@
 "use client"
 
-import Login from "@/components/ui/share/login"
+import Login from "@/components/share/login"
 import { useGlobalContext } from "@/context"
 import {useSession} from "next-auth/react";
-import ManageAccount from "@/components/ui/share/manage-account";
+import ManageAccount from "@/components/share/manage-account";
 
 
 
