@@ -3,10 +3,11 @@
 import Image from "next/image";
 import {useState} from "react";
 import {LockKeyhole, Trash2} from "lucide-react";
-import {Button} from "@/components/ui/button";
+
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import LoginAccountForm from "@/components/form/login-account-form";
 import CreateAccountForm from "@/components/form/create-account-form";
+import { Button } from "../ui/button";
 
 
 const ManageAccount = () => {

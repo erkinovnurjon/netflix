@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import {Button} from "@/components/ui/ui/button";
+import {Button} from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import {signIn} from "next-auth/react";
 
