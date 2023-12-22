@@ -7,9 +7,9 @@ import { useGlobalContext } from "@/context"
 
 const Page = () => {
 
-      const {account} = useGlobalContext()
+  const {account} = useGlobalContext()
 
-      if (account === null) return <Login />
+  if (account === null) return <Login />
   return (
     <div>Browse</div>
   )

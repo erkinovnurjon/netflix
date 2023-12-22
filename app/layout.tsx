@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description: 'Netflix clone build with next.js',
 }
 
+
 export default function RootLayout({
   children,
 }: {
