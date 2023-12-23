@@ -1,8 +1,10 @@
-import {Dispatch, ReactNode, SetStateAction} from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface ContextType {
     account: AccountProps | null
     setAccount: Dispatch<SetStateAction<AccountProps | null>>
+    pageLoader: boolean
+    setPageLoader: Dispatch<SetStateAction<boolean>>
 }
 
 export interface AccountProps {
@@ -21,6 +23,12 @@ export interface AxiosResponse {
     message?: string
 }
 
-export interface AccountResponse extends AxiosResponse{
+export interface AccountResponse extends AxiosResponse {
     data: AccountProps[] | AccountProps
+}
+
+export interface MenuItemProps {
+    id: string
+    title: string
+    path: string
 }
