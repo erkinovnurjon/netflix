@@ -41,10 +41,37 @@ export async function GET(req:Request) {
         const {searchParams} = new URL(req.url)
         const  uid = searchParams.get("uid")
 
-        const account = await Account.find(){uid}
+        if (!uid){
+            return NextResponse.json({success : false , message : "Account is mandatory"})
+        }
 
-        return NextResponse.json({account})
+        const accounts = await Account.find({uid})
+
+        return NextResponse.json({ success : true , accounts})
     }catch (e) {
-        return NextResponse.json({success : false message : "Something went wrong"})
+        return NextResponse.json({success : false ,  message : "Something went wrong"})
     }
 }
+
+//Delete an account
+
+export async function DELETE(req:Request) {
+    try {
+        await connectToDatabase()
+
+        const {searchParams} = new URL(req.url)
+        const  id = searchParams.get("id")
+
+        if (!id){
+            return NextResponse.json({success : false , message : "Account is mandatory"})
+        }
+
+       await Account.findByIdAndDelete(id)
+
+       return NextResponse.json({success : true , message : "Account deleted successfully"})
+
+    }catch (e) {
+        return NextResponse.json({success : false ,  message : "Something went wrong"})
+    }
+}
+
