@@ -4,6 +4,7 @@ import './globals.css'
 import { Provider } from '@/provider'
 import GlobalContext from '@/context'
 import { ReactNode } from 'react'
+import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <GlobalContext>
 
           {children}
+            <Toaster />
           </GlobalContext>
 
         </Provider>
