@@ -69,7 +69,7 @@ const ManageAccount = () => {
             </div>
 
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent>
+                <DialogContent >
                     {state === "login" && <LoginAccountForm />}
                     {state === "create" && <CreateAccountForm />}
                 </DialogContent>
