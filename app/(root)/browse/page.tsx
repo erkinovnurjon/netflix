@@ -8,6 +8,7 @@ import ManageAccount from "@/components/shared/manage-account";
 
 import { useEffect } from "react";
 import Loader from "@/components/shared/Loader";
+import Common from "@/components/shared/common";
 
 
 const Page = () => {
@@ -22,11 +23,7 @@ const Page = () => {
   if (account === null) return <ManageAccount />
   if (pageLoader) return <Loader />
 
-  return (
-    <div>
-      Browse page
-    </div>
-  )
+  return <Common />
 };
 
 export default Page;
