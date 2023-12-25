@@ -12,7 +12,7 @@ import { AccountProps, AccountResponse } from "@/types";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { toast } from "@/components/ui/use-toast";
-import Loader from "./Loader";
+import Loader from "./loader";
 
 
 
