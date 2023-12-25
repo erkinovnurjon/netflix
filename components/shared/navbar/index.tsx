@@ -33,7 +33,7 @@ const Navbar = () => {
       }, [])
       
 
-      const { account, setAccount } = useGlobalContext()
+      const { account, setAccount , setPageLoader } = useGlobalContext()
 
       const router = useRouter()
 
@@ -57,7 +57,12 @@ const Navbar = () => {
                               <ul className={"hidden md:space-x-4 md:flex cursor-pointer"}>
                                     {menuItems.map((item) => (
                                           <li
-                                                onClick={() => router.push(item.path)}
+                                                onClick={() => {
+                                                      router.push(item.path)
+                                                      setPageLoader(true)
+
+                                                }
+                                                }
                                                 key={item.path}
                                                 className={"cursor-pointer text-[16px] font-light text-[#e5e5e5] transition duration-[.4s] hover:text-[#b3b3b3]"}
                                           >
