@@ -21,6 +21,7 @@
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "framer-motion": "^10.16.16",
     "lucide-react": "^0.299.0",
     "mongoose": "^8.0.3",
     "next": "14.0.4",
