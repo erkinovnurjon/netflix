@@ -15,7 +15,7 @@ const MovieRow = ({title , data} : Props) => {
       </h2>
 
       <div className="group relative md:-ml-2">
-            <div className=" flex items-center space-x-0.5  overflow-x-scroll md:space-x-2.5 md:p-2">
+            <div className=" flex items-center space-x-0.5 scrollbar-hide  overflow-x-scroll md:space-x-2.5 md:p-2">
                           {data && data.filter(item => item.backdrop_path !== null && item.poster_path !== null).map((movie => (
                                 <MovieItem
                                       key={movie.id}
