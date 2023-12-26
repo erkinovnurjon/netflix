@@ -12,10 +12,7 @@ import { AccountProps, AccountResponse } from "@/types";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { toast } from "@/components/ui/use-toast";
-import Loader from "./loader";
-
-
-
+import Loader from "@/components/shared/loader";
 
 const ManageAccount = () => {
     const [isDelete, setIsDelete] = useState<boolean>(false)
@@ -98,7 +95,8 @@ const ManageAccount = () => {
                                     className={"max-w-[200px] w-[155px] cursor-pointer flex flex-col items-center gap-3 min-w-[200px]"}
                                 >
                                     <div className="relative">
-                                        <div className={"max-w-[200px] rounded min-w-[84px] max-h-[200px] min-h-[84px] object-cover w-[155px] h-[155px] relative"}>
+                                        <div
+                                            className={"max-w-[200px] rounded min-w-[84px] max-h-[200px] min-h-[84px] object-cover w-[155px] h-[155px] relative"}>
                                             <Image
                                                 src={"https://occ-0-2611-3663.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABfNXUMVXGhnCZwPI1SghnGpmUgqS_J-owMff-jig42xPF7vozQS1ge5xTgPTzH7ttfNYQXnsYs4vrMBaadh4E6RTJMVepojWqOXx.png?r=1d4"}
                                                 alt={"account"}
