@@ -30,13 +30,12 @@ export const getPopularMovies = async (type: string) => {
       }
 }
 
-export const getMoviesBygenre = async (type : string , id : number) => {
+export const getMoviesByGenre = async (type: string, id: number) => {
       try {
             const { data } = await axios.get(`${BASE_URL}/discover/${type}?api_key=${API_KEY}&language=en-US&include_adult=false&sort_by=popularity.desc&with_genres=${id}`)
-            return data && data.results
-      } catch (error) {
-            console.log(error);
-            
+            return data && data.results;
+      } catch (e) {
+            console.log(e)
       }
 }
 

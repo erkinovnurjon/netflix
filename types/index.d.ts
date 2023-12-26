@@ -1,5 +1,6 @@
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
+
 export interface ContextType {
     account: AccountProps | null
     setAccount: Dispatch<SetStateAction<AccountProps | null>>
@@ -108,3 +109,11 @@ export interface VideoProps {
     type: string;
 }
 
+export interface FavouriteProps  {
+    uid : string,
+    accountId : string , 
+    backdrop_path : string ,
+    poster_path: string ,
+    movieId:string,
+    type : string,
+}

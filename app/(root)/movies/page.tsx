@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -7,9 +8,8 @@ import { useSession } from "next-auth/react";
 import Login from "@/components/shared/login";
 import ManageAccount from "@/components/shared/manage-account";
 import Loader from "@/components/shared/loader";
-
+import { getMoviesByGenre } from "@/lib/api";
 import Common from "@/components/shared/common";
-import { getMoviesBygenre } from '@/lib/api';
 
 const Page = () => {
       const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])
@@ -21,14 +21,14 @@ const Page = () => {
             const getAllMovies = async () => {
                   try {
                         const [action, animation, comedy, crime, documentary, drama, family, war] = await Promise.all([
-                              getMoviesBygenre("movie", 28),
-                              getMoviesBygenre("movie", 16),
-                              getMoviesBygenre("movie", 35),
-                              getMoviesBygenre("movie", 80),
-                              getMoviesBygenre("movie", 99),
-                              getMoviesBygenre("movie", 18),
-                              getMoviesBygenre("movie", 10752),
-                              getMoviesBygenre("movie", 10768),
+                              getMoviesByGenre("movie", 28),
+                              getMoviesByGenre("movie", 16),
+                              getMoviesByGenre("movie", 35),
+                              getMoviesByGenre("movie", 80),
+                              getMoviesByGenre("movie", 99),
+                              getMoviesByGenre("movie", 18),
+                              getMoviesByGenre("movie", 10752),
+                              getMoviesByGenre("movie", 10768),
                         ])
 
                         const allResult: MovieDataProps[] = [
@@ -51,7 +51,6 @@ const Page = () => {
             }
 
             getAllMovies()
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
       if (session === null) return <Login />

@@ -17,7 +17,7 @@ import MoviePopup from "@/components/shared/movie/movie-popup";
 import axios from "axios";
 import { AccountProps, AccountResponse } from "@/types";
 import { toast } from "@/components/ui/use-toast";
-
+import { Loader2 } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Navbar = () => {
