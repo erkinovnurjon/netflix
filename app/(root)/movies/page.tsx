@@ -51,6 +51,7 @@ const Page = () => {
             }
 
             getAllMovies()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
       if (session === null) return <Login />
