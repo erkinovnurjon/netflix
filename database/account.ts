@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import {options} from "preact";
+
 
 const accountSchema = new mongoose.Schema({
     uid:String,

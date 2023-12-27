@@ -15,7 +15,7 @@ const Common = ({ moviesData }: Props) => {
       <Navbar />
 
       <div className={"relative pl-4 pb-24 lg:space-y-24"}>
-        <Banner movies={moviesData &&  moviesData[0].data} />
+        <Banner movies={moviesData && moviesData[0].data} />
 
         <section className={"md:space-y-16"}>
           {moviesData && moviesData.map((movie => (
