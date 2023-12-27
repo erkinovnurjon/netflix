@@ -12,7 +12,7 @@ import { getPopularMovies, getTopratedMovies, getTrendingMovies } from "@/lib/ap
 import { MovieDataProps, MovieProps } from "@/types";
 
 const Page = () => {
-  const [moviesData, setmoviesData] = useState<MovieDataProps[]>([])
+  const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])
 
   const { account, pageLoader, setPageLoader } = useGlobalContext();
   const { data: session } = useSession()
@@ -43,18 +43,13 @@ const Page = () => {
         ].map(item => ({ ...item, data: item.data.map((movie: MovieProps) => ({ ...movie, type: "movie", addedToFavorites: false })) }))
 
         const allMovies = [...moviesShows, ...tvShows]
-        
-        
-        setmoviesData(allMovies)
+        setMoviesData(allMovies)
       } catch (e) {
         console.log(e)
       } finally {
         setPageLoader(false)
       }
     }
-  
-    
-    
 
     getAllMovies()
   }, []);

@@ -9,14 +9,24 @@ const GlobalContext = ({ children }: ChildProps) => {
   const [account, setAccount] = useState<AccountProps | null>(null)
   const [pageLoader, setPageLoader] = useState(true)
   const [open, setOpen] = useState(false)
-  const [movie, setMovie] = useState<MovieProps | null  >(null)
+  const [movie, setMovie] = useState<MovieProps | null>(null)
 
   useEffect(() => {
     setAccount(JSON.parse(sessionStorage.getItem("account")!))
   }, [])
 
   return (
-    <Context.Provider value={{ account, movie , setMovie, setAccount, pageLoader, setPageLoader , open , setOpen }}>
+    <Context.Provider value={{
+      account,
+      setAccount,
+      pageLoader,
+      setPageLoader,
+      open,
+      setOpen,
+      movie,
+      setMovie
+    }}
+    >
       {children}
     </Context.Provider>
   );

@@ -13,7 +13,7 @@ export interface ContextType {
 
 export interface AccountProps {
     _id: string
-    uid: string
+    uid: string 
     name: string
     pin: string
 }
@@ -25,6 +25,7 @@ export interface ChildProps {
 export interface AxiosResponse {
     success: boolean
     message?: string
+    uid? : any
 }
 
 export interface AccountResponse extends AxiosResponse {
