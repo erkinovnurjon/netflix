@@ -4,7 +4,7 @@
 import { useParams } from "next/navigation";
 import Login from "@/components/shared/login";
 import ManageAccount from "@/components/shared/manage-account";
-import Loader from "@/components/shared/loader";
+import Loader from "../../../../components/shared/loader"
 import { useGlobalContext } from "@/context";
 import { useSession } from "next-auth/react";
 import { motion } from "framer-motion";
