@@ -6,9 +6,10 @@ import { useGlobalContext } from "@/context";
 import { useSession } from "next-auth/react";
 import Login from "@/components/shared/login";
 import ManageAccount from "@/components/shared/manage-account";
-import Loader from "@/components/shared/loader"
+
 import { getMoviesByGenre } from "@/lib/api";
 import Common from "@/components/shared/common";
+import Loader from '@/components/shared/loader';
 
 const Page = () => {
       const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])

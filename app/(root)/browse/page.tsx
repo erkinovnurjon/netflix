@@ -5,11 +5,12 @@ import { useGlobalContext } from "@/context";
 import Login from "@/components/shared/login";
 import { useSession } from "next-auth/react";
 import ManageAccount from "@/components/shared/manage-account";
-import Loader from "@/components/shared/loader"
+
 import { useEffect, useState } from "react";
 import Common from "@/components/shared/common";
 import { getPopularMovies, getTopratedMovies, getTrendingMovies } from "@/lib/api";
 import { MovieDataProps, MovieProps } from "@/types";
+import Loader from "@/components/shared/loader";
 
 const Page = () => {
   const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])

@@ -4,7 +4,7 @@
 import { useParams } from "next/navigation";
 import Login from "@/components/shared/login";
 import ManageAccount from "@/components/shared/manage-account";
-import Loader from "@/components/shared/loader"
+
 import { useGlobalContext } from "@/context";
 import { useSession } from "next-auth/react";
 import { motion } from "framer-motion";
@@ -14,6 +14,7 @@ import { toast } from "@/components/ui/use-toast";
 import { getSearchResults } from "@/lib/api";
 import { MovieProps } from "@/types";
 import MovieItem from "@/components/shared/movie/movie-item";
+import Loader from "@/components/shared/loader";
 
 const Page = () => {
       const [movies, setMovies] = useState<MovieProps[]>([])
