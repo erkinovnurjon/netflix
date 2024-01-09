@@ -11,7 +11,7 @@ import { toast } from "@/components/ui/use-toast";
 import { getFavourites } from "@/lib/api";
 import Login from "@/components/shared/login";
 import ManageAccount from "@/components/shared/manage-account";
-import Loader from "../../../components/shared/loader"
+import Loader from "@/components/shared/loader"
 import MovieItem from "@/components/shared/movie/movie-item";
 import Navbar from "@/components/shared/navbar";
 import Banner from "@/components/shared/banner";

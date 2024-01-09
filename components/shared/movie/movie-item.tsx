@@ -1,11 +1,9 @@
 "use client"
 
 import { FavouriteProps, MovieProps } from "@/types";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import { CheckIcon, ChevronDown, Loader2, MinusIcon, PlusIcon } from "lucide-react";
 import { useGlobalContext } from "@/context";
-import { usePathname, useRouter } from "next/navigation";
+
 import CustomImage from "@/components/shared/custom-image";
 import { toast } from "@/components/ui/use-toast";
 import axios from "axios";
