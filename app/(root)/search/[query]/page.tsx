@@ -15,6 +15,7 @@ import { getSearchResults } from "@/lib/api";
 import { MovieProps } from "@/types";
 import MovieItem from "@/components/shared/movie/movie-item";
 import Loader from "@/components/shared/loader";
+import { Loader2 } from "lucide-react";
 
 const Page = () => {
       const [movies, setMovies] = useState<MovieProps[]>([])
@@ -56,7 +57,7 @@ const Page = () => {
 
       if (session === null) return <Login />
       if (account === null) return <ManageAccount />
-      if (pageLoader) return <Loader />
+      if (pageLoader) return <Loader2 />
 
       return (
             <motion.div

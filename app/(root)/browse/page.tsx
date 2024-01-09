@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import Common from "@/components/shared/common";
 import { getPopularMovies, getTopratedMovies, getTrendingMovies } from "@/lib/api";
 import { MovieDataProps, MovieProps } from "@/types";
-import Loader from "@/components/shared/loader";
+import { Loader } from "lucide-react";
+
 
 const Page = () => {
   const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])

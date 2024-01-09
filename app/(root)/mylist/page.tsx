@@ -16,7 +16,7 @@ import MovieItem from "@/components/shared/movie/movie-item";
 import Navbar from "@/components/shared/navbar";
 import Banner from "@/components/shared/banner";
 import { useRouter } from "next/navigation";
-import { Loader } from "lucide-react";
+import { Loader, Loader2 } from "lucide-react";
 
 const Page = () => {
       const [favourites, setFavourites] = useState<FavouriteProps[]>([])
@@ -47,7 +47,7 @@ const Page = () => {
 
       if (session === null) return <Login />
       if (account === null) return <ManageAccount />
-      if (pageLoader) return <Loader />
+      if (pageLoader) return <Loader2 />
 
       return (
             <main className={"flex min-h-screen flex-col"}>

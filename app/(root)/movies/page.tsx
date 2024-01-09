@@ -10,6 +10,7 @@ import ManageAccount from "@/components/shared/manage-account";
 import { getMoviesByGenre } from "@/lib/api";
 import Common from "@/components/shared/common";
 import Loader from '@/components/shared/loader';
+import { Loader2 } from 'lucide-react';
 
 const Page = () => {
       const [moviesData, setMoviesData] = useState<MovieDataProps[]>([])
@@ -56,7 +57,7 @@ const Page = () => {
 
       if (session === null) return <Login />
       if (account === null) return <ManageAccount />
-      if (pageLoader) return <Loader />
+      if (pageLoader) return <Loader2 />
 
       return <Common moviesData={moviesData} />
 };
